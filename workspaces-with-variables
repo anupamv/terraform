@@ -57,7 +57,7 @@ locals {
   instance_type="${lookup(local.instances,local.env)}"
   count="${lookup(local.counts,local.env)}"
   mytag="${lookup(local.tags,local.env)}"
-  ami="${lookup(local.myami,local.env)}"
+  ami="${lookup(local.myami,local.env,"default")}"
 
 }
 ##
